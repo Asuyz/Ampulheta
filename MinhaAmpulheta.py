@@ -1,62 +1,58 @@
 import tkinter as tk
 import time
 
+while True:
+    try:
+        print('Seja bem-vindo(a) a sua ampulheta. | 1- Continuar | 2- Sair')
+        escolha= int(input())
+        
+        if escolha == 1:
+            print("""
+            +====+   
+            |(::)|
+            | )( |
+            |(..)|
+            +====+
+            """)
+            print("""Obrigado por ter continuado, para comerçarmos digite o tempo desejado em minutos | 
+            Exemplo: 120 minutos ( 2Horas )""")
+            tempo=int(input())
 
-print("""
+            segundos = tempo * 60
+            i=0
+            while i < tempo:
+                i = i + 1
+                time.sleep(60)
+                print(i)
+                print ('Deseja continuar? | 1 - Sim | 2 - Não')
+                continuar = int(input())
+                try:
+                    if continuar == 1:
+                        True
+                    else:
+                         False
+                except:
+                    ValueError('Escolha incorreta. Escolha novamente.')
+    except:
+        escolha == 2
+        False
+    finally:
+        ValueError('Escolha incorreta. Escolha novamente.')
+        True
+    
 
-
-+====+    
-|(::)|
-| )( |
-|(..)|
-+====+
-""")
-time.sleep(1)
-print("""
-
-
-+====+    
-|(::)|
-| )( |
-|(..)|
-+====+
-""")
-time.sleep(1)
-print("""
-
-
-+====+    
-|(::)|
-| )( |
-|(..)|
-+====+
-""")
-time.sleep(1)
-
-print("SEJA BEM VINDO A SUA AMPULHETA EM PYTHON!!!| Digite o tempo que gostaria em minutos: | (Exemplo: 120 minutos)")
-
-tempo=int(input())
-
-segundos = tempo *60
-
-i = 0
-
-while i < tempo:
-    i = i+1
-    time.sleep(60)
-    print (i)
   
-def abrir_janela():
-    janela = tk.Tk()
-    janela.title("Tempo Esgotado")
-    janela.geometry("300x150")
+#def abrir_janela():
+   # janela = tk.Tk()
+   # janela.title("Tempo Esgotado")
+   # janela.geometry("300x150")
 
-    label = tk.Label(janela, text="""⏳ O tempo acabou!  """, font=("Arial", 14))
-    label.pack(pady=30)
+   # label = tk.Label(janela, text="""⏳ O tempo acabou!  """, font=("Arial", 14))
+   # label.pack(pady=30)
 
-    botao = tk.Button(janela, text="OK", command=janela.destroy)
-    botao.pack()
+   # botao = tk.Button(janela, text="OK", command=janela.destroy)
+   # botao.pack()
 
-    janela.mainloop()
+   # janela.mainloop()
 
-abrir_janela()
+# abrir_janela()
