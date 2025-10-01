@@ -21,49 +21,47 @@ import time
 
 
 
-
-
 # Backup da Lógica
 
-#while True:
-#    try:
-#        print('Seja bem-vindo(a) a sua ampulheta. | 1- Continuar | 2- Sair')
-#        escolha= int(input())
-#        
-#        if escolha == 1:
-#            print("""
-#            +====+   
-#            |(::)|
-#            | )( |
-#            |(..)|
-#            +====+
-#            """)
-#            print("""Obrigado por ter continuado, para comerçarmos digite o tempo desejado em minutos | 
-#            Exemplo: 120 minutos ( 2Horas )""")
-#            tempo=int(input())
+#import time
 
-#            segundos = tempo * 60
-#            i = 0
-#            while i < tempo:
-#                i = i + 1
-#                time.sleep(60)
-#                print(i)
-#                print ('Deseja continuar? | 1 - Sim | 2 - Não')
-#                continuar = int(input())
-#                try:
-#                    if continuar == 1:
-#                        True
-#                    else:
-#                         False
-#                except:
-#                    ValueError('Escolha incorreta. Escolha novamente.')
-#    except:
-#        escolha == 2
-#        False
-#    finally:
-#        ValueError('Escolha incorreta. Escolha novamente.')
-#        True
-    
+# while True:
+#     try:
+#         print('Seja bem-vindo(a) a sua ampulheta. | 1- Continuar | 2- Sair')
+#         escolha = int(input())
+
+#         if escolha  == 1:
+#             print("""
+#             +====+   
+#             |(::)|
+#             | )( |
+#             |(..)|
+#             +====+
+#             """)
+
+#             print("""Obrigado por ter continuado, para começarmos digite o tempo desejado em minutos | 
+#             Exemplo: 120 minutos (2 Horas)""")
+
+#             tempo = int(input())
+#             segundos = tempo * 60  
+
+#             i = 0
+#             while i < tempo:   # em minutos
+#                 i += 1
+#                 time.sleep(60)  # pausa de 1 minuto
+#                 print(f"{i} minuto(s) já se passaram.")
+
+#             print("⏳ O tempo acabou!")
+
+#         elif escolha == 2:
+#             print("Saindo da ampulheta...")
+#             break
+
+#         else:
+#             raise ValueError("Escolha incorreta. Escolha novamente.")
+
+#     except ValueError as e:
+#         print(e)
 
   
 #def abrir_janela():
