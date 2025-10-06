@@ -33,7 +33,7 @@ def abrir_janela_tempo():
 
 while True:
     try:
-        print('Seja bem-vindo(a) a sua ampulheta. | 1- Continuar | 2- Sair')
+        print('Seja bem-vindo(a) a sua ampulheta. | 1- Continuar | 2- Sair |')
         escolha = int(input())
         
 
@@ -62,9 +62,25 @@ while True:
                 print(f"{i} minuto(s) já se passaram.")
 
             print("⏳ O tempo acabou!")
-            abrir_janela_tempo()
-            break
+            
+            print ("Quer executar o programa novamente? | 1 - Sim | 2 - Sair | ")
+            execucao = int(input())
+            try:
+               
+                if execucao == 1:
+                    
+                    continue
+                
+                elif execucao == 2:
+                    abrir_janela_sair()
+                    
+                    break
+                else: 
+                    raise ValueError("Voltando...")
 
+            except ValueError as e :
+                print("Entrada inválida.", e)
+                continue
 
 
         elif escolha == 2:
